@@ -11,7 +11,6 @@ public class StaminaBar : MonoBehaviour
     public int currentStamina;                                   // The current stamina the player has.
     public int checkStamina;                                   // The current stamina the player has to check if the value is changed.
     public bool tired = false;                                   // The boolean to know if the player is tired
-    public HungerBar currentHunger;
     public Slider staminaSlider;                                 // Reference to the UI's stamina bar.
 
 
