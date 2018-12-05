@@ -11,6 +11,7 @@ public class StaminaBar : MonoBehaviour
     public int currentStamina;                                   // The current stamina the player has.
     public int checkStamina;                                   // The current stamina the player has to check if the value is changed.
     public bool tired = false;                                   // The boolean to know if the player is tired
+    public Slider currentHungerSlider;                                 // Reference to the UI's hunger Bar
     public Slider staminaSlider;                                 // Reference to the UI's stamina bar.
 
 
@@ -72,13 +73,18 @@ public class StaminaBar : MonoBehaviour
             currentStamina -= 1;
             //..  and det the stamina bar's value to the current stamina.
             staminaSlider.value = currentStamina;
+
+            // Don't forget to lose hunger there
+            HungerBar.currentHunger; 
+
+
         }
     }
 
     IEnumerator Tired()
     {
         tired = true;
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(1);
         tired = false;
         RecoverStamina();
 

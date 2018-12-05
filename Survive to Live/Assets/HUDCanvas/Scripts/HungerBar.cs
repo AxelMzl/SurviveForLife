@@ -6,7 +6,7 @@ public class HungerBar : MonoBehaviour
 {
 
     public float startingHunger = 100f;                            // The amount of hunger the player starts the game with.
-    public float currentHunger;                                   // The current hunger the player has.
+    public static float currentHunger;                                   // The current hunger the player has.
     public bool famished = false;                                   // The boolean to know if the player is famished
     public Slider hungerSlider;                                 // Reference to the UI's junger bar.
 
