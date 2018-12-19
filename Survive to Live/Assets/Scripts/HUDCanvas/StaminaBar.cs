@@ -31,7 +31,7 @@ public class StaminaBar : MonoBehaviour
         checkStamina = currentStamina;
         if (currentStamina > 1)
         {
-            Sprint();
+            //Sprint();
 
             // check if the the value of stamina is changed
             if (checkStamina == currentStamina)

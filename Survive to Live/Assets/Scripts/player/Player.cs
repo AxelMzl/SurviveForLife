@@ -11,7 +11,9 @@ public class Player : MonoBehaviour {
     private float speedRun;
 
     private GameObject healHUD;
+    private GameObject hungerHUD;
     private HealthBar healBar;
+    private HungerBar hungerBar;
     private Rigidbody2D rbody;
 
     private Vector2 input; //vector input
@@ -23,6 +25,9 @@ public class Player : MonoBehaviour {
         rbody = GetComponent<Rigidbody2D>();
         healHUD = GameObject.Find("HealthSlider");
         healBar = (HealthBar)healHUD.GetComponent(typeof(HealthBar));
+
+        hungerHUD = GameObject.Find("HungerSlider");
+        hungerBar = (HungerBar)hungerHUD.GetComponent(typeof(HealthBar));
     }
 
     void Update()
@@ -64,7 +69,7 @@ public class Player : MonoBehaviour {
             healBar.TakeDamage(50);
 
             if (healBar.currentHealth <= 0)
-                GameObject.Find("ObjectPlayer").SetActive(false);
+                GameObject.Find("Player").SetActive(false);
                 
         }
     }
